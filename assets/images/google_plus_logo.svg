@@ -1,0 +1,23 @@
+<svg width="23.371582" height="20.013489" viewBox="0 0 23.3716 20.0135" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<filter id="filter_1_979_dd" x="0.000000" y="0.000000" width="20.013672" height="20.013489" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+			<feOffset dx="0" dy="4"/>
+			<feGaussianBlur stdDeviation="1.33333"/>
+			<feComposite in2="hardAlpha" operator="out" k2="-1" k3="1"/>
+			<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+			<feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_dropShadow_1" result="shape"/>
+		</filter>
+	</defs>
+	<path id="Path 1289" d="M20.8188 4.8054L20.8188 2.40271L19.6177 2.40271L19.6177 4.8054L17.2148 4.8054L17.2148 6.00676L19.6177 6.00676L19.6177 8.40947L20.8188 8.40947L20.8188 6.00676L23.2217 6.00676L23.2217 4.8054L20.8188 4.8054Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	<path id="Path 1289" d="M20.8188 2.40271L19.6177 2.40271L19.6177 4.8054L17.2148 4.8054L17.2148 6.00676L19.6177 6.00676L19.6177 8.40947L20.8188 8.40947L20.8188 6.00676L23.2217 6.00676L23.2217 4.8054L20.8188 4.8054L20.8188 2.40271Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="0.300000"/>
+	<g filter="url(#filter_1_979_dd)">
+		<path id="Path 1290" d="M10.0068 4.80539L10.0068 7.2081L13.4053 7.2081C12.9092 8.60646 11.5732 9.61078 10.0068 9.61078C8.01953 9.61078 6.40283 7.99377 6.40283 6.00674C6.40283 4.01971 8.01953 2.40269 10.0068 2.40269C10.8682 2.40269 11.6973 2.71146 12.3408 3.27248L13.9194 1.46085C12.8384 0.518982 11.4497 0 10.0068 0C6.69482 0 4 2.69463 4 6.00674C4 9.31886 6.69482 12.0135 10.0068 12.0135C13.3188 12.0135 16.0137 9.31886 16.0137 6.00674L16.0137 4.80539L10.0068 4.80539Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Path 1290" d="M10.0068 7.2081L13.4053 7.2081C12.9092 8.60646 11.5732 9.61078 10.0068 9.61078C8.01953 9.61078 6.40283 7.99377 6.40283 6.00674C6.40283 4.01971 8.01953 2.40269 10.0068 2.40269C10.8682 2.40269 11.6973 2.71146 12.3408 3.27248L13.9194 1.46085C12.8384 0.518982 11.4497 0 10.0068 0C6.69482 0 4 2.69463 4 6.00674C4 9.31886 6.69482 12.0135 10.0068 12.0135C13.3188 12.0135 16.0137 9.31886 16.0137 6.00674L16.0137 4.80539L10.0068 4.80539L10.0068 7.2081Z" stroke="#707070" stroke-opacity="0" stroke-width="1.000000"/>
+	</g>
+</svg>
