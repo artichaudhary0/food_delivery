@@ -1,5 +1,9 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_delivery_app/views/home_screen.dart';
+import 'package:food_delivery_app/views/login_screen.dart';
+
+import '../common/extensions.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -8,14 +12,16 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 24.0,right:24,),
+        padding: const EdgeInsets.only(
+          left: 24.0,
+          right: 24,
+        ),
         child: SingleChildScrollView(
           child: Column(
             children: [
-
-              Padding(
-                padding: const EdgeInsets.only(top: 82.0),
-                child: const Text(
+              const Padding(
+                padding: EdgeInsets.only(top: 82.0),
+                child: Text(
                   "Sign Up",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -49,7 +55,8 @@ class SignUpScreen extends StatelessWidget {
                         border: InputBorder.none,
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         hintText: "Name",
                         hintStyle: const TextStyle(color: Color(0xFFB6B7B7)),
@@ -57,7 +64,8 @@ class SignUpScreen extends StatelessWidget {
                             vertical: 20, horizontal: 20),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         fillColor: const Color(0xFFF2F2F2),
                         filled: true,
@@ -71,7 +79,8 @@ class SignUpScreen extends StatelessWidget {
                         border: InputBorder.none,
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         hintText: "Email",
                         hintStyle: const TextStyle(color: Color(0xFFB6B7B7)),
@@ -79,7 +88,8 @@ class SignUpScreen extends StatelessWidget {
                             vertical: 20, horizontal: 20),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         fillColor: const Color(0xFFF2F2F2),
                         filled: true,
@@ -93,7 +103,8 @@ class SignUpScreen extends StatelessWidget {
                         border: InputBorder.none,
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         hintText: "Mobile No",
                         hintStyle: const TextStyle(color: Color(0xFFB6B7B7)),
@@ -101,7 +112,8 @@ class SignUpScreen extends StatelessWidget {
                             vertical: 20, horizontal: 20),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         fillColor: const Color(0xFFF2F2F2),
                         filled: true,
@@ -115,7 +127,8 @@ class SignUpScreen extends StatelessWidget {
                         border: InputBorder.none,
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         hintText: "Address",
                         hintStyle: const TextStyle(color: Color(0xFFB6B7B7)),
@@ -123,7 +136,8 @@ class SignUpScreen extends StatelessWidget {
                             vertical: 20, horizontal: 20),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         fillColor: const Color(0xFFF2F2F2),
                         filled: true,
@@ -137,7 +151,8 @@ class SignUpScreen extends StatelessWidget {
                         border: InputBorder.none,
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         hintText: "Password",
                         hintStyle: const TextStyle(color: Color(0xFFB6B7B7)),
@@ -145,7 +160,8 @@ class SignUpScreen extends StatelessWidget {
                             vertical: 20, horizontal: 20),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         fillColor: const Color(0xFFF2F2F2),
                         filled: true,
@@ -159,7 +175,8 @@ class SignUpScreen extends StatelessWidget {
                         border: InputBorder.none,
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         hintText: "Confirm Password",
                         hintStyle: const TextStyle(color: Color(0xFFB6B7B7)),
@@ -167,7 +184,8 @@ class SignUpScreen extends StatelessWidget {
                             vertical: 20, horizontal: 20),
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(34),
-                          borderSide: const BorderSide(color: Colors.transparent),
+                          borderSide:
+                              const BorderSide(color: Colors.transparent),
                         ),
                         fillColor: const Color(0xFFF2F2F2),
                         filled: true,
@@ -181,6 +199,8 @@ class SignUpScreen extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
+
+                  NavigatorClass.navigatorPushRoute(context,const HomeScreen(),);
                 },
                 child: Container(
                   height: 56,
@@ -203,35 +223,32 @@ class SignUpScreen extends StatelessWidget {
                   ),
                 ),
               ),
-          
-          
               const SizedBox(
-                height: 28,
+                height: 70,
               ),
-          
-
-              Align(
-                alignment: Alignment.center,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
-                  child: RichText(
-                    text: const TextSpan(
-                      text: "Already have an Account?",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: "Monkey",
-                        fontWeight: FontWeight.normal,
-                        color: Color(0xFFfc6012),
-                      ),
-                      children: [
-                        TextSpan(
-                          text: "   Login",
-                          style: TextStyle(
-                            color: Color(0xFF4a4b4d),
-                          ),
-                        ),
-                      ],
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20.0),
+                child: RichText(
+                  text: TextSpan(
+                    text: "Already have an Account?",
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontFamily: "Monkey",
+                      fontWeight: FontWeight.normal,
+                      color: Color(0xFFfc6012),
                     ),
+                    children: [
+                      TextSpan(
+                        text: "   Login",
+                        style: const TextStyle(
+                          color: Color(0xFF4a4b4d),
+                        ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            NavigatorClass.navigatorPushRoute(context,const LoginScreen(),);
+                          },
+                      ),
+                    ],
                   ),
                 ),
               )

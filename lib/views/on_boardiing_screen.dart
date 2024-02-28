@@ -1,17 +1,20 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:food_delivery_app/common/color_extension.dart';
+import 'package:food_delivery_app/common/extensions.dart';
+import 'package:food_delivery_app/views/sign_up_screen.dart';
 
 import 'login_screen.dart';
 
-class OnBoaardingScreen extends StatefulWidget {
-  const OnBoaardingScreen({super.key});
+class OnBoardingScreen extends StatefulWidget {
+  const OnBoardingScreen({super.key});
+
 
   @override
-  State<OnBoaardingScreen> createState() => _OnBoaardingScreenState();
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
 }
 
-class _OnBoaardingScreenState extends State<OnBoaardingScreen> {
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     Size media = MediaQuery.of(context).size;
@@ -23,7 +26,7 @@ class _OnBoaardingScreenState extends State<OnBoaardingScreen> {
             children: [
               Container(
                 width: media.width,
-                height: MediaQuery.of(context).size.height / 3,
+                height: MediaQuery.of(context).size.height / 2.5,
                 decoration: BoxDecoration(
                   color: const Color(0xFFfc6012),
                   image: const DecorationImage(
@@ -44,7 +47,7 @@ class _OnBoaardingScreenState extends State<OnBoaardingScreen> {
                 ),
               ),
               Positioned(
-                bottom: -120,
+                bottom: -140,
                 left: media.width / 3,
                 child: Container(
                   height: media.height / 3,
@@ -52,17 +55,18 @@ class _OnBoaardingScreenState extends State<OnBoaardingScreen> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
-                    image: DecorationImage(
+                    image:const DecorationImage(
                       image: AssetImage(
                         "assets/images/monkey_face.png",
                       ),
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.shade400,
-                        spreadRadius: 5,
-                        blurRadius: 10,
-                        offset: Offset(5, 5),
+                  color: Colors.grey.shade400,
+                    spreadRadius: 3,
+                    blurRadius: 10,
+
+                        offset: Offset(3, 3),
                       ),
                     ],
                   ),
@@ -127,12 +131,8 @@ class _OnBoaardingScreenState extends State<OnBoaardingScreen> {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => LoginScreen(),
-                ),
-              );
+              NavigatorClass.navigatorPushRoute(context, LoginScreen(),);
+
             },
             child: Container(
               height: 56,
@@ -155,28 +155,33 @@ class _OnBoaardingScreenState extends State<OnBoaardingScreen> {
               ),
             ),
           ),
-          Container(
-            height: 56,
-            width: MediaQuery.of(context).size.width,
-            margin: const EdgeInsets.symmetric(
-              horizontal: 25,
-              vertical: 25,
-            ),
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              // color: Color(0xFFFC6011),
-              border: Border.all(color: TColor.primary),
+          GestureDetector(
+            onTap: (){
+              NavigatorClass.navigatorPushRoute(context,const SignUpScreen(),);
+            },
+            child: Container(
+              height: 56,
+              width: MediaQuery.of(context).size.width,
+              margin: const EdgeInsets.symmetric(
+                horizontal: 25,
+                vertical: 25,
+              ),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                // color: Color(0xFFFC6011),
+                border: Border.all(color: TColor.primary),
 
-              borderRadius: BorderRadius.circular(34),
-            ),
-            child: Text(
-              "Create an Account",
-              style: TextStyle(
-                fontFamily: "Metropolis",
-                height: 1.5,
-                fontWeight: FontWeight.w700,
-                color: TColor.primary,
-                fontSize: 16,
+                borderRadius: BorderRadius.circular(34),
+              ),
+              child: Text(
+                "Create an Account",
+                style: TextStyle(
+                  fontFamily: "Metropolis",
+                  height: 1.5,
+                  fontWeight: FontWeight.w700,
+                  color: TColor.primary,
+                  fontSize: 16,
+                ),
               ),
             ),
           ),

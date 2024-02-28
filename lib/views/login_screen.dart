@@ -1,5 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_delivery_app/views/on_boarding_screen_second.dart';
+import 'package:food_delivery_app/views/reset_password.dart';
+import 'package:food_delivery_app/views/sign_up_screen.dart';
+
+import '../common/extensions.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -18,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Spacer(),
+            const Spacer(),
             const Text(
               "Login",
               textAlign: TextAlign.center,
@@ -52,7 +58,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       border: InputBorder.none,
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(34),
-                        borderSide: const BorderSide(color: Colors.transparent),
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                        ),
                       ),
                       hintText: "Your Email",
                       hintStyle: const TextStyle(color: Color(0xFFB6B7B7)),
@@ -60,7 +68,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           vertical: 20, horizontal: 20),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(34),
-                        borderSide: const BorderSide(color: Colors.transparent),
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                        ),
                       ),
                       fillColor: const Color(0xFFF2F2F2),
                       filled: true,
@@ -77,7 +87,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderSide: const BorderSide(color: Colors.transparent),
                       ),
                       hintText: "Password",
-                      hintStyle: const TextStyle(color: Color(0xFFB6B7B7)),
+                      hintStyle: const TextStyle(
+                        color: Color(0xFFB6B7B7),
+                      ),
                       contentPadding: const EdgeInsets.symmetric(
                           vertical: 20, horizontal: 20),
                       enabledBorder: OutlineInputBorder(
@@ -96,11 +108,9 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
+                NavigatorClass.navigatorPushRoute(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginScreen(),
-                  ),
+                  const OnBoardSecondScreen(),
                 );
               },
               child: Container(
@@ -127,14 +137,22 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 35,
             ),
-            const Text(
-              "Forgot your password?",
-              style: TextStyle(
-                fontFamily: "Metropolis",
-                height: 1.5,
-                fontWeight: FontWeight.w700,
-                color: Color(0xFF7C7D7E),
-                fontSize: 14,
+            GestureDetector(
+              onTap: () {
+                NavigatorClass.navigatorPushRoute(
+                  context,
+                  const ResetPasswordScreen(),
+                );
+              },
+              child: const Text(
+                "Forgot your password?",
+                style: TextStyle(
+                  fontFamily: "Metropolis",
+                  height: 1.5,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF7C7D7E),
+                  fontSize: 14,
+                ),
               ),
             ),
             const SizedBox(
@@ -182,7 +200,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 20,
                     ),
                     Text(
-                      "Login",
+                      "Login with Facebook",
                       style: TextStyle(
                         fontFamily: "Metropolis",
                         height: 1.5,
@@ -216,7 +234,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   color: const Color(0xFFDD4B39),
                   borderRadius: BorderRadius.circular(34),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -228,7 +246,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: 20,
                     ),
                     Text(
-                      "Login",
+                      "Login with Google",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: "Metropolis",
@@ -242,13 +260,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
-              padding: const EdgeInsets.only(bottom: 20.0),
+              padding: const EdgeInsets.only(bottom: 50.0),
               child: RichText(
-                text: const TextSpan(
+                text: TextSpan(
                   text: "Don't have an Account? ",
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 14,
                     fontFamily: "Monkey",
                     fontWeight: FontWeight.normal,
@@ -257,14 +275,21 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     TextSpan(
                       text: "   Sign Up",
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Color(0xFF4a4b4d),
                       ),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          NavigatorClass.navigatorPushRoute(
+                            context,
+                            const SignUpScreen(),
+                          );
+                        },
                     ),
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

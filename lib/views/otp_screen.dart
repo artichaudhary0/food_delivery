@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/views/confirm_password_screen.dart';
+
+import '../common/extensions.dart';
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});
@@ -10,9 +13,9 @@ class OtpScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 82.0),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.only(top: 82.0),
+              child: Text(
                 "We have sent an OTP to your Mobile",
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -22,9 +25,9 @@ class OtpScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
                 '''Please check your mobile number 071*****12 continue to reset your password''',
                 textAlign: TextAlign.center,
                 maxLines: 3,
@@ -48,10 +51,10 @@ class OtpScreen extends StatelessWidget {
                   width: 56,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: Color(0xFFF2F2F2),
+                    color: const Color(0xFFF2F2F2),
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  child: Text(
+                  child: const Text(
                     "*",
                     style: TextStyle(
                       height: 1.8,
@@ -65,10 +68,10 @@ class OtpScreen extends StatelessWidget {
                   width: 56,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: Color(0xFFF2F2F2),
+                    color: const Color(0xFFF2F2F2),
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  child: Text(
+                  child: const Text(
                     "*",
                     style: TextStyle(
                       height: 1.8,
@@ -82,10 +85,10 @@ class OtpScreen extends StatelessWidget {
                   width: 56,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: Color(0xFFF2F2F2),
+                    color: const Color(0xFFF2F2F2),
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  child: Text(
+                  child: const Text(
                     "*",
                     style: TextStyle(
                       height: 1.8,
@@ -99,10 +102,10 @@ class OtpScreen extends StatelessWidget {
                   width: 56,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: Color(0xFFF2F2F2),
+                    color: const Color(0xFFF2F2F2),
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  child: Text(
+                  child: const Text(
                     "*",
                     style: TextStyle(
                       height: 1.8,
@@ -117,7 +120,12 @@ class OtpScreen extends StatelessWidget {
               height: 28,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                NavigatorClass.navigatorPushRoute(
+                  context,
+                  const ConfirmPasswordScreen(),
+                );
+              },
               child: Container(
                 height: 56,
                 width: MediaQuery.of(context).size.width,
@@ -138,7 +146,9 @@ class OtpScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 40,),
+            const SizedBox(
+              height: 40,
+            ),
             RichText(
               text: const TextSpan(
                 text: "Didn't Receive?",

@@ -1,7 +1,6 @@
 import 'dart:async';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/common/extensions.dart';
 import 'package:food_delivery_app/views/on_boardiing_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,14 +13,9 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 2), () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => OnBoaardingScreen(),
-        ),
-      );
-      log("splash");
+    Timer(const Duration(seconds: 2), () {
+      NavigatorClass.navigatorPushRoute(
+          context,  OnBoardingScreen());
     });
     super.initState();
   }
@@ -78,17 +72,17 @@ class _SplashScreenState extends State<SplashScreen> {
             const SizedBox(
               height: 10,
             ),
-             Text(
+            Text(
               "FOOD DELIVERY",
               style: TextStyle(
-                fontFamily: "Monkey",
-                fontWeight: FontWeight.bold,
-                color: Colors.grey.shade500,
-                letterSpacing: 2.5
-              ),
+                  fontFamily: "Monkey",
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey.shade500,
+                  letterSpacing: 2.5),
             ),
-            SizedBox(height: 10,),
-
+            const SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),

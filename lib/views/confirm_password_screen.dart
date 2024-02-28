@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_delivery_app/views/on_boardiing_screen.dart';
+
+import '../common/extensions.dart';
+import 'on_boarding_screen_second.dart';
 
 class ConfirmPasswordScreen extends StatelessWidget {
   const ConfirmPasswordScreen({super.key});
@@ -11,9 +15,9 @@ class ConfirmPasswordScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 82.0),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.only(top: 82.0),
+              child: Text(
                 "New Password",
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -24,9 +28,9 @@ class ConfirmPasswordScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
                 '''Please enter your email to receive a link to  create a new password via email''',
                 textAlign: TextAlign.center,
                 maxLines: 3,
@@ -64,7 +68,7 @@ class ConfirmPasswordScreen extends StatelessWidget {
                       filled: true,
                     ),
                   ),
-                  SizedBox(height: 28,),
+                  const SizedBox(height: 28,),
                   TextFormField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
@@ -91,7 +95,9 @@ class ConfirmPasswordScreen extends StatelessWidget {
               height: 28,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                NavigatorClass.navigatorPushRoute(context,const OnBoardSecondScreen(),);
+              },
               child: Container(
                 height: 56,
                 width: MediaQuery.of(context).size.width,

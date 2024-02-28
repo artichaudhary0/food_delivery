@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:food_delivery_app/views/otp_screen.dart';
+
+import '../common/extensions.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});
@@ -11,9 +14,9 @@ class ResetPasswordScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 82.0),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.only(top: 82.0),
+              child: Text(
                 "Reset Password",
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -25,9 +28,9 @@ class ResetPasswordScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: Text(
                 "Please enter your email to receive a"
                 "link to  create a new password via email",
                 textAlign: TextAlign.center,
@@ -54,8 +57,8 @@ class ResetPasswordScreen extends StatelessWidget {
                   ),
                   hintText: "Name",
                   hintStyle: const TextStyle(color: Color(0xFFB6B7B7)),
-                  contentPadding: const EdgeInsets.symmetric(
-                      vertical: 20, horizontal: 20),
+                  contentPadding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(34),
                     borderSide: const BorderSide(color: Colors.transparent),
@@ -70,6 +73,10 @@ class ResetPasswordScreen extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
+                NavigatorClass.navigatorPushRoute(
+                  context,
+                  const OtpScreen(),
+                );
               },
               child: Container(
                 height: 56,
