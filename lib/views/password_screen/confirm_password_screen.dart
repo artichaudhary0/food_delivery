@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:food_delivery_app/views/on_boardiing_screen.dart';
+import 'package:food_delivery_app/views/on_boarding_screen/on_boarding_screen.dart';
 
-import '../common/extensions.dart';
-import 'on_boarding_screen_second.dart';
+import '../../common/extensions.dart';
+import '../on_boarding_screen/on_boarding_screen_second.dart';
 
 class ConfirmPasswordScreen extends StatelessWidget {
   const ConfirmPasswordScreen({super.key});

@@ -1,11 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:food_delivery_app/views/on_boarding_screen_second.dart';
-import 'package:food_delivery_app/views/reset_password.dart';
-import 'package:food_delivery_app/views/sign_up_screen.dart';
+import 'package:food_delivery_app/views/on_boarding_screen/on_boarding_screen_second.dart';
+import 'package:food_delivery_app/views/password_screen/reset_password.dart';
+import 'package:food_delivery_app/views/signup_screen/sign_up_screen.dart';
 
-import '../common/extensions.dart';
+import '../../common/extensions.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

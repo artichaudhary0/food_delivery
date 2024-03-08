@@ -2,13 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/common/color_extension.dart';
 import 'package:food_delivery_app/common/extensions.dart';
-import 'package:food_delivery_app/views/sign_up_screen.dart';
-
-import 'login_screen.dart';
+import 'package:food_delivery_app/views/signup_screen/sign_up_screen.dart';
+import '../../utils/custom_button.dart';
+import '../login_screen/login_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
-
 
   @override
   State<OnBoardingScreen> createState() => _OnBoardingScreenState();
@@ -17,16 +16,17 @@ class OnBoardingScreen extends StatefulWidget {
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
-    Size media = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Column(
         children: [
           Stack(
             clipBehavior: Clip.none,
             children: [
+
               Container(
-                width: media.width,
-                height: MediaQuery.of(context).size.height / 2.5,
+                width: size.width,
+                height: size.height / 2.5,
                 decoration: BoxDecoration(
                   color: const Color(0xFFfc6012),
                   image: const DecorationImage(
@@ -48,24 +48,23 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
               Positioned(
                 bottom: -140,
-                left: media.width / 3,
+                left: size.width / 3,
                 child: Container(
-                  height: media.height / 3,
-                  width: media.width / 3,
+                  height: size.height / 3,
+                  width: size.width / 3,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle,
-                    image:const DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage(
                         "assets/images/monkey_face.png",
                       ),
                     ),
                     boxShadow: [
                       BoxShadow(
-                  color: Colors.grey.shade400,
-                    spreadRadius: 3,
-                    blurRadius: 10,
-
+                        color: Colors.grey.shade400,
+                        spreadRadius: 3,
+                        blurRadius: 10,
                         offset: Offset(3, 3),
                       ),
                     ],
@@ -74,9 +73,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               )
             ],
           ),
-          const SizedBox(
-            height: 100.0,
-          ),
+          SizedBox(height: size.height / 8.9),
           RichText(
             text: const TextSpan(
               text: "Meal",
@@ -97,20 +94,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ],
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
+          SizedBox(height: size.width / 60),
           Text(
             "FOOD DELIVERY",
             style: TextStyle(
-                fontFamily: "Monkey",
-                fontWeight: FontWeight.bold,
-                color: Colors.grey.shade500,
-                letterSpacing: 2.5),
+              fontFamily: "Monkey",
+              fontWeight: FontWeight.bold,
+              color: Colors.grey.shade500,
+              letterSpacing: 2.5,
+            ),
           ),
-          SizedBox(
-            height: media.width * 0.1,
-          ),
+          SizedBox(height: size.width * 0.075),
           const Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 60,
@@ -129,35 +123,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              NavigatorClass.navigatorPushRoute(context, LoginScreen(),);
-
+          CustomButton(
+            text: "Login",
+            onPressed: () {
+              NavigatorClass.navigatorPushRoute(
+                context,
+                const LoginScreen(),
+              );
             },
-            child: Container(
-              height: 56,
-              width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.symmetric(horizontal: 25),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: const Color(0xFFFC6011),
-                borderRadius: BorderRadius.circular(34),
-              ),
-              child:  Text(
-                "Login",
-                style: TextStyle(
-                  fontFamily: "Metropolis",
-                  height: 1.5,
-                  fontWeight: FontWeight.w700,
-                  color: TColor.textField,
-                  fontSize: 16,
-                ),
-              ),
-            ),
           ),
           GestureDetector(
-            onTap: (){
-              NavigatorClass.navigatorPushRoute(context,const SignUpScreen(),);
+            onTap: () {
+              NavigatorClass.navigatorPushRoute(
+                context,
+                const SignUpScreen(),
+              );
             },
             child: Container(
               height: 56,
@@ -185,6 +165,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ),
             ),
           ),
+          Icon(CupertinoIcons.heart,weight: 700,),
         ],
       ),
     );

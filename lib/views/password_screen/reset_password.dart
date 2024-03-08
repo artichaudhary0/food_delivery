@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:food_delivery_app/views/otp_screen.dart';
+import 'package:food_delivery_app/views/password_screen/otp_screen.dart';
 
-import '../common/extensions.dart';
+import '../../common/extensions.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});

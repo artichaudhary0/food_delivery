@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/views/home_screen.dart';
-import 'package:food_delivery_app/views/login_screen.dart';
+import 'package:food_delivery_app/views/home_screen/home_screen.dart';
+import 'package:food_delivery_app/views/login_screen/login_screen.dart';
 
-import '../common/extensions.dart';
+import '../../common/extensions.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/views/confirm_password_screen.dart';
+import 'package:food_delivery_app/views/password_screen/confirm_password_screen.dart';
 
-import '../common/extensions.dart';
+import '../../common/extensions.dart';
 
 class OtpScreen extends StatelessWidget {
   const OtpScreen({super.key});

@@ -10,4 +10,8 @@ class NavigatorClass {
       ),
     );
   }
+
+  static navigatorPushNameRoute(BuildContext context, String whereTo) {
+    Navigator.pushNamed(context, whereTo);
+  }
 }

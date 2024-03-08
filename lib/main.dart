@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/views/on_boarding_screen_second.dart';
-import 'package:food_delivery_app/views/splash_screen.dart';
+import 'package:food_delivery_app/common/go_routing.dart';
+import 'package:food_delivery_app/views/splash_screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,8 +19,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home:const SplashScreen(),
+      initialRoute: "/",
+      onGenerateRoute: GoRouting.customRouting,
+      home: const SplashScreen(),
     );
   }
 }
-
